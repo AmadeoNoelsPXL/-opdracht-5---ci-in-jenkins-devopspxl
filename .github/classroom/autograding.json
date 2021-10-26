@@ -1,0 +1,104 @@
+{
+  "tests": [
+    {
+      "name": "test for checkout_code",
+      "setup": "",
+      "run": "grep -i -E -A3 'stage\\(.checkout.code.\\)' Jenkinsfile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "test for install_dependencies",
+      "setup": "",
+      "run": "grep -i -E -A3 'stage\\(.install.dependencies.\\)' Jenkinsfile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "test for npmtin (global tool config)",
+      "setup": "",
+      "run": "grep -i -E -C3 'npmtin' Jenkinsfile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "test for unittest",
+      "setup": "",
+      "run": "grep -i -E -A3 'stage\\(.unit.*test.\\)' Jenkinsfile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "test for create_bundle",
+      "setup": "",
+      "run": "grep -i -E -A5 'stage\\(.create.bundle.\\)' Jenkinsfile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "test for failure",
+      "setup": "",
+      "run": "grep -i -E -C3 'failure' Jenkinsfile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "test for success",
+      "setup": "",
+      "run": "grep -i -E -C3 'success' Jenkinsfile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "test for cleanup ",
+      "setup": "",
+      "run": "grep -i -E -C3 'cleanws\\(\\)|sh \"rm -rf' Jenkinsfile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "test for artifact",
+      "setup": "",
+      "run": "grep -i -E -C3 'archiveArtifact|archiveArtifacts' Jenkinsfile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "test for junit",
+      "setup": "",
+      "run": "grep -i -E -C1 'junit' Jenkinsfile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
