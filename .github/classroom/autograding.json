@@ -21,9 +21,9 @@
       "points": 1
     },
     {
-      "name": "test for npmtin (global tool config)",
+      "name": "test for nodetin (global tool config)",
       "setup": "",
-      "run": "grep -i -E -C3 'npmtin' Jenkinsfile",
+      "run": "grep -i -E -C3 'nodetin' Jenkinsfile",
       "input": "",
       "output": "",
       "comparison": "included",
