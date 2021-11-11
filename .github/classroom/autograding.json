@@ -73,7 +73,7 @@
     {
       "name": "test for cleanup ",
       "setup": "",
-      "run": "grep -i -E -C3 'cleanws\\(\\)|sh \"rm -rf' Jenkinsfile",
+      "run": "grep -i -E -C3 'cleanws\\(\\)|rm -rf' Jenkinsfile",
       "input": "",
       "output": "",
       "comparison": "included",
