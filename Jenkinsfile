@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo "good luck..."
             }
-        },
+        }
         stage('Checkout calculator app') {
             steps {
                 git branch: 'main',
