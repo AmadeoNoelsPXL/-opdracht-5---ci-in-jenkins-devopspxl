@@ -14,6 +14,13 @@ pipeline {
 
                 sh "ls -lat"
             }
-    }
+        }
+
+        stage('Example'){
+            steps{
+                sh 'npm config ls'
+            }
+        }       
+
     }
 }
