@@ -25,7 +25,7 @@ pipeline {
 
         stage('install dependencies'){
             steps{
-                sh 'nodetin ci'
+                sh 'npm ci'
             }
         }       
 
