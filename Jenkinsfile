@@ -32,17 +32,9 @@ pipeline {
         stage('unittest'){
             steps{
                 sh 'npm test'
-            }
-
-            post {
-            always{
-                junit (
-                    allowEmptyResults: true,
-                    testResults: '**/test-reports/*.xml'
-                )
-            }
+            }           
         }
-        } 
+        
 
         stage('create bundle'){
 
