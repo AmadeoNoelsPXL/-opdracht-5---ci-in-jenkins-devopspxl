@@ -33,13 +33,15 @@ pipeline {
             steps{
                 sh 'npm test'
             }
-        } 
 
-        post {
+            post {
             always{
                 junit '**/reports/junit/*.xaml'
             }
         }
+        } 
+
+        
 
         
             
