@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    tools{nodejs "nodetin"}
     stages {
         stage('opdracht 5') {
             steps {
