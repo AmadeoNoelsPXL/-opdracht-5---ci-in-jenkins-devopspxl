@@ -20,6 +20,12 @@ pipeline {
             steps{
                 sh 'npm config ls'
             }
+        }   
+
+        stage('install dependencies'){
+            steps{
+                sh 'nodetin ci'
+            }
         }       
 
     }
