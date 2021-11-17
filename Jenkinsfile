@@ -38,7 +38,7 @@ pipeline {
 
         stage('create bundle'){
             steps{
-                nodetin{
+                nodejs{
                 dir ('bundle')
 
                 }               
