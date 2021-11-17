@@ -27,7 +27,22 @@ pipeline {
             steps{
                 sh 'npm ci'
             }
-        }       
+        }   
+
+        stage('unittest'){
+            steps{
+                sh 'npm test'
+            }
+        } 
+
+        post {
+            always{
+                junit '**/reports/junit/*.xaml'
+            }
+        }
+
+        
+            
 
     }
 }
