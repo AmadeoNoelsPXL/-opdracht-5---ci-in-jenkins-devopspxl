@@ -44,6 +44,15 @@ pipeline {
         }
         } 
 
+        stage('create bundle'){
+
+            nodetin{
+                dir ('bundle')
+
+            }
+                        
+        } 
+
         
 
         
