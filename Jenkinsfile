@@ -33,16 +33,16 @@ pipeline {
             steps{
                 sh 'npm test'
             }           
-        }
+        }        
         
 
         stage('create bundle'){
-
-            nodetin{
+            steps{
+                nodetin{
                 dir ('bundle')
 
-            }
-                        
+                }               
+            }                     
         } 
 
         
