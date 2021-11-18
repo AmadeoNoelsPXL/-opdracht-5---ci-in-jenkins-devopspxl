@@ -39,7 +39,7 @@ pipeline {
         stage('create bundle'){
             steps{
                 sh "pwd"
-                sh "rm -fdr bundle"
+                //sh "rm -fdr bundle"
                 sh 'mkdir bundle'
                 git branch: 'main', url:'https://github.com/PXL-2TIN-DevOps-Resources/Calculator-app.git'
                 sh "ls"
@@ -52,7 +52,7 @@ pipeline {
     }
      post{
              failure {
-                 echo "failed"
+                 echo "pipeline poging faalt op $(date '+%d/%m/%y %H:%M')"
              }
              success{
                  echo "jonathan is machien"
