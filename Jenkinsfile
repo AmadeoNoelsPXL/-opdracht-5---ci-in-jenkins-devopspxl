@@ -52,7 +52,7 @@ pipeline {
     }
      post{
              failure {
-                 echo "pipeline poging faalt op $(date '+%d/%m/%y %H:%M')"
+                 sh  "echo pipeline poging faalt op \$[(date '+%d/%m/%y %H:%M')]"
              }
              success{
                  echo "jonathan is machien"
