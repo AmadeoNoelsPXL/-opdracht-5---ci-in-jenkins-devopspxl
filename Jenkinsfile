@@ -38,10 +38,11 @@ pipeline {
 
         stage('create bundle'){
             steps{
-                sh "rm bundle"
+                sh "rm -fdr bundle"
                 sh 'mkdir bundle'
                 git branch: 'main', url:'https://github.com/PXL-2TIN-DevOps-Resources/Calculator-app.git'
                 sh 'mv Calculator-app bundle'
+                sh "rm -rf bundle.zip"
                 sh 'zip -r bundle.zip bundle' 
             }                     
         }
