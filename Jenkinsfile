@@ -51,9 +51,11 @@ pipeline {
              
     }
      post{
-             failure {                
+             failure { 
+                 def today = new Date()     
+                                         
 
-                 sh "echo pipeline poging faalt op $date"
+                 sh "echo pipeline poging faalt op ${today}"
              }
              success{
                  echo "jonathan is machien"
