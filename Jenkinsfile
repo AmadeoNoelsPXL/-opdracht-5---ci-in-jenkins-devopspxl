@@ -52,7 +52,7 @@ pipeline {
     }
      post{
              failure {                 
-                 echo " 'pipeline poging faalt op' >> ~/jenkinserrolog"
+                 echo " "pipeline poging faalt op" >> ~/jenkinserrolog"
              }
              success{
                  echo "jonathan is machien"
