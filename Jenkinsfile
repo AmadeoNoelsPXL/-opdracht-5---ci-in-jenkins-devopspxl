@@ -43,7 +43,7 @@ pipeline {
                 sh 'mkdir bundle'
                 git branch: 'main', url:'https://github.com/PXL-2TIN-DevOps-Resources/Calculator-app.git'
                 sh "ls"
-                sh 'mv !(bundle) bundle tests'
+                sh 'mv * bundle'
                 sh "rm -rf bundle.zip"
                 sh 'zip -r bundle.zip bundle' 
             }                     
