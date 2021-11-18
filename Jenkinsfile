@@ -29,11 +29,11 @@ pipeline {
             }
         }   
 
-        stage('unittest'){
-            steps{
-                sh 'npm test'
-            }           
-        }        
+        //stage('unittest'){
+            //steps{
+                //sh 'npm test'
+            //}           
+        //}        
         
 
         stage('create bundle'){
