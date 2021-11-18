@@ -51,8 +51,9 @@ pipeline {
              
     }
      post{
-             failure {                 
-                 echo " "pipeline poging faalt op" >> ~/jenkinserrolog"
+             failure {                
+
+                 sh "echo pipeline poging faalt op $date"
              }
              success{
                  echo "jonathan is machien"
