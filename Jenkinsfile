@@ -48,7 +48,9 @@ pipeline {
                 sh 'zip -r bundle.zip bundle' 
             }                     
         }
-         post{
+             
+    }
+     post{
              failure {
                  echo "failed"
              }
@@ -58,7 +60,6 @@ pipeline {
              always{
                  echo "altijd"
              }
-         }      
-    }
+         } 
 
 }
