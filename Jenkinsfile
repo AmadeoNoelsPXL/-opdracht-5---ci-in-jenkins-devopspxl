@@ -54,7 +54,7 @@ pipeline {
              failure {
                  echo "failed"
              }
-             succes{
+             success{
                  echo "jonathan is machien"
              }
              always{
