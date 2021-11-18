@@ -38,17 +38,12 @@ pipeline {
 
         stage('create bundle'){
             steps{
-                nodejs{
-                dir ('bundle')
-
-                }               
+                sh 'mkdir bundle'
+                git branch: 'main', url:'https://github.com/PXL-2TIN-DevOps-Resources/Calculator-app.git'
+                sh 'mv Calculator-App bundle'
+                sh 'zip -r bundle.zip bundle' 
             }                     
-        } 
-
+        }
         
-
-        
-            
-
     }
 }
