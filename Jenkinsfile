@@ -43,7 +43,7 @@ pipeline {
                 sh 'mkdir bundle'
                 git branch: 'main', url:'https://github.com/PXL-2TIN-DevOps-Resources/Calculator-app.git'
                 sh "ls"
-                sh 'mv public Dockerfile app.js docker-compose.yml package-lock.json package.json routes.js server.js'
+                sh 'mv public Dockerfile app.js docker-compose.yml package-lock.json package.json routes.js server.js bundle'
                 sh "rm -rf bundle.zip"
                 sh 'zip -r bundle.zip bundle' 
             }                     
