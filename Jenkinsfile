@@ -1,8 +1,7 @@
 pipeline {
     agent any
     tools{nodejs "nodetin"}
-    try{
-        stages {        
+    stages {
         stage('opdracht 5') {
             steps {
                 echo "good luck..."
@@ -30,11 +29,11 @@ pipeline {
             }
         }   
 
-        stage('unittest'){
-            steps{
-                sh 'npm test'
-            }           
-        }        
+        //stage('unittest'){
+            //steps{
+                //sh 'npm test'
+            //}           
+        //}        
         
 
         stage('create bundle'){
@@ -49,14 +48,17 @@ pipeline {
                 sh 'zip -r bundle.zip bundle' 
             }                     
         }
+         post{
+             failure {
+                 echo "failed"
+             }
+             succes{
+                 echo "jonathan is machien"
+             }
+             always{
+                 echo "altijd"
+             }
+         }      
+    }
 
-        
-        
-    }
-    catch(err){
-        sh " echo jij bent een sukkel"
-    }
-    
-    
-}
 }
