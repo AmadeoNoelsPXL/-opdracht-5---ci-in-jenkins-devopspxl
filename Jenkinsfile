@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{nodejs "nodetin"}
-    tools{maven "M3"}
+    
     
     
     stages {
