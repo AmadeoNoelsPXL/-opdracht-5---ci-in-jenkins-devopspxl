@@ -33,9 +33,12 @@ pipeline {
 
         stage('unittest'){
             steps{
-                sh 'npm test'                       
-            }   
-        }     
+                sh 'npm test'
+                sh "mvm test"
+                junit '**/target/surefire-reports/TEST-*.xaml'
+                 }                       
+        }   
+            
         
 
         stage('create bundle'){
@@ -63,15 +66,7 @@ pipeline {
                    sh "mv jenkinserrorlog.txt /var/lib/jenkins/users/Amadeo_4482341112045518464"
                    
                }
-             } 
-
-             always {
-                 steps{
-                     sh "mvm test"
-                     junit '**/target/surefire-reports/TEST-*.xaml'
-
-                 }
-             }            
+             }                     
          } 
 
 }
