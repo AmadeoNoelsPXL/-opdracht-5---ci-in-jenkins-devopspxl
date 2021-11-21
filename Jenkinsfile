@@ -55,17 +55,13 @@ pipeline {
                 script {
                    def date = new Date()
                    def data = "Datum: " + date
-                   writeFile(file: 'jenkinsfileerror.txt', text: data)
+                   writeFile(file: 'jenkinserrorlog.txt', text: data)
+                   sh "pwd"
                    sh "ls -l"
+                   sh "move jenkinserrorlog.txt /var/lib/jenkins/users/Amadeo_4482341112045518464"
+                   
                }
-             }
-             success{
-                 echo "jonathan is machien"
-                 
-             }
-             always{
-                 echo "altijd"
-             }
+             }             
          } 
 
 }
