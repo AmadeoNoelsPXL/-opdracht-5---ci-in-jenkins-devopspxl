@@ -66,7 +66,11 @@ pipeline {
              } 
 
              always {
-                 step([$class: 'Publisher', reportFilenamePattern: '**/testing results.xml'])
+                 steps{
+                     sh "mvm test"
+                     junit '**/target/surefire-reports/TEST-*.xaml'
+
+                 }
              }            
          } 
 
