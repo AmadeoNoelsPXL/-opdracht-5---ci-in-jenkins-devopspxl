@@ -35,8 +35,9 @@ pipeline {
         stage('unittest'){
             steps{
                 sh 'npm test'
-                sh 'mvn test'
-                junit 'var/lib/jenkins/workspace/asignment5/reports-*.xaml'
+                junit '**/junit.xml'
+                
+                
                  }                       
         }   
             
