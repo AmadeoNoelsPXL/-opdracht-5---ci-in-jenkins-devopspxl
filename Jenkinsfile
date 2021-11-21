@@ -51,18 +51,17 @@ pipeline {
              
     }
      post{
-             failure { 
-                 steps{
-                     def today = new Date()     
-                                         
-
-                 sh "echo pipeline poging faalt op ${today}"
-
-                 }
-                 
+             failure {
+                script {
+                   def date = new Date()
+                   def data = "Datum: " + date
+                   writeFile(file: 'jenkinsfileerror.txt', text: data)
+                   sh "ls -l"
+               }
              }
              success{
                  echo "jonathan is machien"
+                 
              }
              always{
                  echo "altijd"
