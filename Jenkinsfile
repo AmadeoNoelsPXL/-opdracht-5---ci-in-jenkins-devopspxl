@@ -1,6 +1,8 @@
 pipeline {
     agent any
     tools{nodejs "nodetin"}
+    
+    
     stages {
         stage('opdracht 5') {
             steps {
@@ -61,7 +63,11 @@ pipeline {
                    sh "mv jenkinserrorlog.txt /var/lib/jenkins/users/Amadeo_4482341112045518464"
                    
                }
-             }             
+             } 
+
+             always {
+                 step([$class: 'Publisher', reportFilenamePattern: '**/testing results.xml'])
+             }            
          } 
 
 }
