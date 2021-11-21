@@ -1,6 +1,7 @@
 pipeline {
     agent any
     tools{nodejs "nodetin"}
+    tools{maven "M3"}
     
     
     stages {
@@ -34,8 +35,8 @@ pipeline {
         stage('unittest'){
             steps{
                 sh 'npm test'
-                
-                junit '**/target/surefire-reports/TEST-*.xaml'
+                sh 'mvn test'
+                junit 'var/lib/jenkins/workspace/asignment5/reports-*.xaml'
                  }                       
         }   
             
