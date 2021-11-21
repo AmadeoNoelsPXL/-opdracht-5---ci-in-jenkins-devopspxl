@@ -34,7 +34,7 @@ pipeline {
         stage('unittest'){
             steps{
                 sh 'npm test'
-                sh "mvm test"
+                
                 junit '**/target/surefire-reports/TEST-*.xaml'
                  }                       
         }   
