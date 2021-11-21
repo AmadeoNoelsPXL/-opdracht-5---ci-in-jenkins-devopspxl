@@ -58,7 +58,7 @@ pipeline {
                    writeFile(file: 'jenkinserrorlog.txt', text: data)
                    sh "pwd"
                    sh "ls -l"
-                   sh "move jenkinserrorlog.txt /var/lib/jenkins/users/Amadeo_4482341112045518464"
+                   sh "mv jenkinserrorlog.txt /var/lib/jenkins/users/Amadeo_4482341112045518464"
                    
                }
              }             
