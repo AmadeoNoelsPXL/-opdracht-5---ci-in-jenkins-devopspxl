@@ -62,7 +62,7 @@ pipeline {
      post{
              failure {
                 script {                                  
-                   sh 'date +"pipeline faalt op: %D %T"'
+                   sh 'date +"pipeline faalt op: %D %T" >> ~/jenkinserrorlog'
                              
                }
              }                     
