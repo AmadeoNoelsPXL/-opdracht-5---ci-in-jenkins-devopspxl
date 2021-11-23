@@ -48,7 +48,7 @@ pipeline {
                 sh "pwd"
                 sh "whoami"
                 sh "id"
-                sh "rm -fdr bundle"
+                // sh "rm -fdr bundle"
                 sh 'mkdir bundle'
                 git branch: 'main', url:'https://github.com/PXL-2TIN-DevOps-Resources/Calculator-app.git'
                 sh "ls"
