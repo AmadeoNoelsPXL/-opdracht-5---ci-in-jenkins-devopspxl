@@ -63,12 +63,9 @@ pipeline {
              failure {
                 script {
                    def date = new Date()
-                   def data = "Datum: " + date
-                   writeFile(file: 'jenkinserrorlog.txt', text: data)
-                   sh "pwd"
-                   sh "ls -l"
-                   sh "mv jenkinserrorlog.txt /var/lib/jenkins/users/Amadeo_4482341112045518464"
-                   
+                   def data = "Pipeline poging faalt op Datum: " + date
+                   // writeFile(file: 'jenkinserrorlog.txt', text: data)
+                   sh 'data >> ~/jenkinsoorlog'                   
                }
              }                     
          } 
