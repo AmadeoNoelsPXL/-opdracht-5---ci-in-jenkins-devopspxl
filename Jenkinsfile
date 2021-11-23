@@ -65,7 +65,7 @@ pipeline {
                    def date = new Date()
                    def data = "Pipeline poging faalt op Datum: " + date
                    // writeFile(file: 'jenkinserrorlog.txt', text: data)
-                   sh 'data >> ~/jenkinsoorlog'                   
+                   sh 'data >> jenkinsoorlog'                   
                }
              }                     
          } 
