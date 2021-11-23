@@ -61,11 +61,8 @@ pipeline {
     }
      post{
              failure {
-                script {
-                   // def date = new Date()
-                   // def data = "Pipeline poging faalt op Datum: " + date                   
-                   sh  'pipline poging faalt op $(date "+%d/%m/%y 
-                   %H:%M) >> ~/jenkinserrolog''
+                script {                                  
+                   sh 'date +"pipeline faalt op: %D %T"'
                              
                }
              }                     
