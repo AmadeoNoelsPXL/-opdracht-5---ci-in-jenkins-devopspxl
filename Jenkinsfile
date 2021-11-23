@@ -62,11 +62,11 @@ pipeline {
      post{
              failure {
                 script {
-                   def date = new Date()
-                   def data = "Pipeline poging faalt op Datum: " + date
-                   // writeFile(file: 'jenkinserrorlog.txt', text: data)
-                   sh "data >> jenkinsoorlog"
-                   echo "$data"             
+                   // def date = new Date()
+                   // def data = "Pipeline poging faalt op Datum: " + date                   
+                   sh  'pipline poging faalt op $(date "+%d/%m/%y 
+                   %H:%M) >> ~/jenkinserrolog''
+                             
                }
              }                     
          } 
